@@ -2,18 +2,100 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <title>Riana's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
+
+  <style>
+    a{
+        text-decoration:none;  
+     }
+    body, h2 {
+        font-family: 'Open Sans', sans-serif;
+            }
+    h1 {
+        font-family: 'Merienda';
+        font-size: 2.5rem;
+        letter-spacing: 8px;
+        font-size: 30px;
+        padding-bottom: 0rem;
+    }
+  </style>
+
   <body>
+      
+      <div class="header">
+        <nav>
+          <ul class="nav-links">
+              <li><a href="#About"><b>About</a></li>
+              <li><a href="#Current">Current</a></li>
+              <li><a href="#Personal">Personal</a></li>
+              <li><a href="#Projects">Projects</a></li>
+            </ul></b>
+        </nav>
+      </div>
+    
     <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+    <div> 
+
+      <section id="About">
+        <h1 >Welcome, I am Riana!</h1>
+            <p><em>I am a rising junior at UCSD studying computer science!</p>
+            <p>I am inspired by the belief the greatest ideas come out of multidisciplinary thought, and I am constantly finding ways
+            to combine my interests across STEM, humanities, and the arts. I love expressing my creativity through programming in particular and working with the social aspects of technology. In the future I possibly want to work in human-computer interaction, AI and ML, and user experience/interaction.</p>
+        <p>More about me and what I do below! :)</p></em>
+     </div>
+
+    <button onclick="location.href='https://www.linkedin.com/in/riana-ali-b78278212'" type="button">
+        LinkedIn</button>
+    <button onclick="location.href='https://github.com/rianaali'" type="button">
+        Github</button>  
+    </section>
+
+    <section id="Current">
+     <h2>What I am up to</h2>
+        <li> <strong>Research Intern @ USC's ICT Laboratory </strong>
+            <p>Working on the coversational AI system DIVIS which trains first responders
+            for sexual assault by improving the model through data annotation and analysis of interaction logs.</p>
+       </li>
+       <li> <strong> Google's Software Product Sprint </strong>
+            <p>Working on a team project and creating an online portfolio with Google mentors.</p>
+       </li>
+       <li> <strong> Breaking Through Tech AI @ UCLA </strong>
+            <p>Participating in machine learning and AI labs and meeting industry mentors.</p>
+       </li>  
+    </section>
+
+    <section id="Personal">
+     <h2>Personal</h2>
+        <p>I really like the monkeys and the color pink...</p>
+        <img src="images/mymelody_1_200x200.jpeg"/>
+        <img src="images/monkey_200x200.jpeg"/>
+        <img src="images/ezgif-3-78e4ae8acb.gif"/>
+        <p>If you want to learn more fun facts about me try:</p>
+        <button onclick="addRandomFact()">Riana FunFact Generator</button>
+        <div id="fact-container"></div>
+    </section>
+
+    <section id="Projects">
+     <h2>Projects</h2>
+        <p>Coming soon...</p>
+    </section>
     </div>
+    <form action="/form-handler" method="POST">
+        <p>Feel free to contact me!:</p>
+        <textarea name="text-input">Type here...</textarea>
+        <br/>
+        <input type="submit" />
+      </form>
+
+      <h1>Greeting</h1>
+      <p>Click this button to be greeted!</p>
+      <button onclick="sayHello();">
+        Get greeting
+      </button>
+      <p id="hello-container"></p>
+      <p>Click <a href="/hello">here</a> to see the server response directly.</p>
   </body>
 </html>
