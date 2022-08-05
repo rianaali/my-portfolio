@@ -24,6 +24,7 @@
   </style>
 
   <body>
+      
       <div class="header">
         <nav>
           <ul class="nav-links">
@@ -40,7 +41,7 @@
 
       <section id="About">
         <h1 >Welcome, I am Riana!</h1>
-            <p><em>I am a rising junior at Georgia Tech studying computer science!</p>
+            <p><em>I am a rising junior at UCSD studying computer science!</p>
             <p>I am inspired by the belief the greatest ideas come out of multidisciplinary thought, and I am constantly finding ways
             to combine my interests across STEM, humanities, and the arts. I love expressing my creativity through programming in particular and working with the social aspects of technology. In the future I possibly want to work in human-computer interaction, AI and ML, and user experience/interaction.</p>
         <p>More about me and what I do below! :)</p></em>
@@ -82,5 +83,19 @@
         <p>Coming soon...</p>
     </section>
     </div>
+    <form action="/form-handler" method="POST">
+        <p>Feel free to contact me!:</p>
+        <textarea name="text-input">Type here...</textarea>
+        <br/>
+        <input type="submit" />
+      </form>
+
+      <h1>Greeting</h1>
+      <p>Click this button to be greeted!</p>
+      <button onclick="sayHello();">
+        Get greeting
+      </button>
+      <p id="hello-container"></p>
+      <p>Click <a href="/hello">here</a> to see the server response directly.</p>
   </body>
 </html>
