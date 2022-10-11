@@ -27,11 +27,24 @@ function addRandomFact() {
   factContainer.innerText = fact;
 }
 
-async function sayHello() {
-    const responseFromServer = await fetch('/hello');
-    const textFromResponse = await responseFromServer.text();
-  
-    const dateContainer = document.getElementById('hello-container');
-    dateContainer.innerText = textFromResponse;
+async function giveBookRecc() {
+    const responseFromServer = await fetch('/bookRecc');
+    //const textFromResponse = await responseFromServer.text();
+    const books = await responseFromServer.json();
+    const bookContainer = document.getElementById('bookRecc-container');
+    bookContainer.innerText = books["book"];
   }
-  
+
+  async function seeMessages()
+  {
+    const responseFromServer = await fetch('/list-messages');
+    const messages = await responseFromServer.json();
+    const messageListElement = document.getElementById('messages-container');
+    messages.forEach((message) => {
+        const messageElement = document.createElement('li');
+        messageElement.innerText = message.messageText;
+        messageListElement.appendChild(messageElement);
+    })
+}
+
+

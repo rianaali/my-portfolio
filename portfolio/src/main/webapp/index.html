@@ -43,7 +43,7 @@
         <h1 >Welcome, I am Riana!</h1>
             <p><em>I am a rising junior at UCSD studying computer science!</p>
             <p>I am inspired by the belief the greatest ideas come out of multidisciplinary thought, and I am constantly finding ways
-            to combine my interests across STEM, humanities, and the arts. I love expressing my creativity through programming in particular and working with the social aspects of technology. In the future I possibly want to work in human-computer interaction, AI and ML, and user experience/interaction.</p>
+            to combine my interests across STEM, humanities, and the arts. I love expressing my creativity through programming in particular and working with the social aspects of technology. In the future I possibly want to work in human-computer interaction, AI and ML, or user experience/interaction.</p>
         <p>More about me and what I do below! :)</p></em>
      </div>
 
@@ -82,20 +82,37 @@
      <h2>Projects</h2>
         <p>Coming soon...</p>
     </section>
-    </div>
-    <form action="/form-handler" method="POST">
+
+      <section id="BookReccomendations">
+      <h2>Book Reccomendations</h2>
+      <p>Some books I reccomend :)</p>
+      <button onclick="giveBookRecc();">
+        Book Reccomender
+      </button>
+      <p id="bookRecc-container"></p>
+      <p>Click <a href="/bookRecc">here</a> to see the server response directly.</p>
+        </section>
+
+       <section id="ContactMe">
+             <form action="/form-handler" method="POST">
         <p>Feel free to contact me!:</p>
         <textarea name="text-input">Type here...</textarea>
         <br/>
         <input type="submit" />
+         
       </form>
 
-      <h1>Greeting</h1>
-      <p>Click this button to be greeted!</p>
-      <button onclick="sayHello();">
-        Get greeting
+
+<button onclick="seeMessages();">
+        View Other Messages
       </button>
-      <p id="hello-container"></p>
-      <p>Click <a href="/hello">here</a> to see the server response directly.</p>
+      <ul id="messages-container"></ul>
+       </section> 
+    </div>
+
+   
+   
+
+
   </body>
 </html>
